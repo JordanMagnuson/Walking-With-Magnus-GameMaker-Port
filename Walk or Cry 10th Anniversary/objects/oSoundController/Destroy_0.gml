@@ -1,2 +1,0 @@
-audio_emitter_free(soundEmitter00);
-audio_emitter_free(soundEmitter01);

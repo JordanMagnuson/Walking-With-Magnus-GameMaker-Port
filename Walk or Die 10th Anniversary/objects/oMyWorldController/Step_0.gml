@@ -19,6 +19,9 @@ if (global.debug) {
 	if(keyboard_check_pressed(ord("5"))){
 		changeLocation("snow");
 	}
+	if(keyboard_check_pressed(ord("6"))){
+		changeLocation("redwoods");
+	}
 }
 
 oddFrame *= -1;

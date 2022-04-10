@@ -1,1 +1,0 @@
-audio_emitter_free(sEmit6);

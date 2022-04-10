@@ -15,7 +15,10 @@ switch (oMyWorldController.locationName){
 		break;		
 	case "beach":
 		sprite_index = sprGroundBeach;
-		break;							
+		break;
+	case "redwoods":
+		sprite_index = sprground_redwoods;
+		break;	
 }
 			
 // Hit box			

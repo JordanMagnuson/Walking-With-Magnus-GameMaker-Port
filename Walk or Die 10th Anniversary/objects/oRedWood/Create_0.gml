@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+/// @description Insert description here
+// You can write your code in this editor
 event_inherited();
 
 mySpriteCollection = [redwood_01,redwood_02]

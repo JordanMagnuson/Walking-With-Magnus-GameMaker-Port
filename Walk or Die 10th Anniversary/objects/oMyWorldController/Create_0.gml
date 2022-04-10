@@ -28,6 +28,9 @@ else if(locationName == "snow"){
 else if(locationName == "plains"){
 	currentLocation = instance_create_depth(0, 0, 0, oPlains);
 }
+else if(locationName == "redwoods"){
+	currentLocation = instance_create_depth(0,0,0,oRedWoods)
+}
 alarm[0] = CHANGE_LOCATION_TIME;//changeLocationAlarm
 
 //UNCOMMENT THE BELOW ITEMS AS THEY ARE ADDED INTO THE GAME
