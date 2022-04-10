@@ -8,10 +8,11 @@
     <movie fps="60" />
     <movie width="600" />
     <movie height="400" />
-    <movie version="10" />
+    <movie version="28" />
     <movie minorVersion="0" />
     <movie platform="AIR" />
     <movie background="#000000" />
+    <movie preferredSDK="Apache Flex 4.16.1 FP27.0 AIR27.0 en_US;4.16.1;" />
   </output>
   <!-- Other classes to be compiled into your SWF -->
   <classpaths>
@@ -86,7 +87,7 @@
   <!-- Other project options -->
   <options>
     <option showHiddenPaths="False" />
-    <option testMovie="Default" />
+    <option testMovie="Unknown" />
     <option testMovieCommand="" />
   </options>
   <!-- Plugin storage -->
