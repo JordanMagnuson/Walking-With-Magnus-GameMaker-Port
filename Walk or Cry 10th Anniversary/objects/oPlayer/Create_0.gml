@@ -1,7 +1,24 @@
 SPEED = global.player_speed;
 walking = false;
+startedWalking = false;
+sleeping = false;
+lastPressedKey = 0;
+lastPressedAgo = 0;
+timeSinceWalking = 0;
 
-sprite_index = sprPlayer;
+//const
+DEFAULT_ZZZ_INTERVAL = 1;
+
+
+worldController = instance_find(oMyWorldController)
+
+if(global.baybe_type == "stroller")
+{
+	sprite_index = sprStroller
+}
+else
+	sprite_index = sprwalking_frontpack
+
 image_index = 0;
 animSpeed = SPEED/10;
 image_speed = 0; //start the player animation on standing
@@ -13,3 +30,26 @@ sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, spr
 //Location
 x= 50;
 y = oGround.y;
+
+
+function releaseZZZ()
+{
+	if(sleeping)
+	{
+		if(global.baybe_type == "stroller")
+		{
+			var temp = instance_create_depth(x,y,depth,oZ)
+			temp.zConstruct(x + 5,y - 18);
+		}
+		else
+		{
+			var temp = instance_create_depth(x,y,depth,oZ)
+			temp.zConstruct(x + 6,y - 19);
+		}
+	}
+	alarm[0] = room_speed * DEFAULT_ZZZ_INTERVAL;
+}
+
+
+//inital start of alarm, the function will then repeat it
+alarm[0] = room_speed * DEFAULT_ZZZ_INTERVAL;
