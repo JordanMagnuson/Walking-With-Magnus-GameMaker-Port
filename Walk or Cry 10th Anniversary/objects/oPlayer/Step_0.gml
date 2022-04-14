@@ -72,7 +72,7 @@ else if(!walking)
 	image_index = 0;
 }
 
-if(keyboard_check_released(ord("X")))
+if(keyboard_check_released(vk_space))
 {
 	audio_stop_sound(sndWalking);
 }

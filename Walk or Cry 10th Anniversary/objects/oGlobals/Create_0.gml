@@ -2,7 +2,7 @@
 // This is new from original AS3 source code.
 
 // Debug?
-global.debug = false;
+global.debug = true;
 global.show_bounding_boxes = false;
 
 // Use smooth (sub-pixel) scrolling, or retro-style integer pixel scrolling?

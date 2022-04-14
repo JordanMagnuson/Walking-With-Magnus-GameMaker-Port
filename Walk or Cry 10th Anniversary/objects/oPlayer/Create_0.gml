@@ -10,7 +10,10 @@ timeSinceWalking = 0;
 DEFAULT_ZZZ_INTERVAL = 1;
 
 
-worldController = instance_find(oMyWorldController)
+worldController = instance_find(oMyWorldController,0)
+
+if(worldController == noone)
+	show_debug_message("controller not found")
 
 if(global.baybe_type == "stroller")
 {
