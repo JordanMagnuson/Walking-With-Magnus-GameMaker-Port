@@ -35,7 +35,7 @@ if (lastPressedAgo == 0)
 {
 	walking = true;
 	sleeping = false;
-	image_speed = animSpeed
+	image_speed =  animSpeed
 	if(!startedWalking)
 	{
 		startedWalking = true;	
@@ -50,6 +50,7 @@ else if (lastPressedAgo > 0.6)
 if (walking) 
 {
 	timeSinceWalking = 0;
+	image_speed =  animSpeed
 }
 else 
 {
@@ -68,8 +69,8 @@ if(sleeping)
 }
 else if(!walking)
 {
-	image_speed = 0;
-	image_index = 0;
+	//image_speed = 0;
+	//image_index = 0;
 }
 
 if(keyboard_check_released(vk_space))

@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprredwood_01",
+    "path": "sprites/sprredwood_01/sprredwood_01.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

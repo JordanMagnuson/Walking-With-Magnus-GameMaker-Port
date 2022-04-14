@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprStroller",
+    "path": "sprites/sprStroller/sprStroller.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
