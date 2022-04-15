@@ -27,7 +27,7 @@ else if(keyboard_check_pressed(ord("D")) && lastPressedKey != ord("D"))
 }
 else 
 {
-	lastPressedAgo += delta_time;
+	lastPressedAgo += delta_time / 1000000;
 }
 
 
@@ -54,7 +54,7 @@ if (walking)
 }
 else 
 {
-	timeSinceWalking += delta_time;
+	timeSinceWalking += delta_time / 1000000;
 }
 
 if (!walking && worldController.time == "night" && startedWalking)
@@ -69,8 +69,8 @@ if(sleeping)
 }
 else if(!walking)
 {
-	//image_speed = 0;
-	//image_index = 0;
+	image_speed = 0;
+	image_index = 0;
 }
 
 if(keyboard_check_released(vk_space))
