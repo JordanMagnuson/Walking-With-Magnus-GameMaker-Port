@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "short_sound_11.mp3",
-  "duration": 0.992653,
+  "soundFile": "short_sound_10_breathing.mp3",
+  "duration": 4.832653,
   "parent": {
     "name": "Baby",
     "path": "folders/Sounds/Baby.yy",
   },
   "resourceVersion": "1.0",
-  "name": "short_sound_11",
+  "name": "short_sound_10_breathing",
   "tags": [],
   "resourceType": "GMSound",
 }

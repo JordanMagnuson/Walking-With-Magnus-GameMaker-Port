@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -13,8 +14,8 @@
   "soundFile": "crying_hard_01.mp3",
   "duration": 33.3322449,
   "parent": {
-    "name": "baby",
-    "path": "folders/Sounds/baby.yy",
+    "name": "Baby",
+    "path": "folders/Sounds/Baby.yy",
   },
   "resourceVersion": "1.0",
   "name": "crying_hard_01",
