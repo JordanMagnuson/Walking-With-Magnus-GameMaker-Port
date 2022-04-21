@@ -10,7 +10,7 @@
     <movie height="400" />
     <movie version="28" />
     <movie minorVersion="0" />
-    <movie platform="AIR" />
+    <movie platform="Flash Player" />
     <movie background="#000000" />
     <movie preferredSDK="Apache Flex 4.16.1 FP27.0 AIR27.0 en_US;4.16.1;" />
   </output>

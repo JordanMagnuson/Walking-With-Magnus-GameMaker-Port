@@ -15,7 +15,8 @@ if(image_xscale == -1){
 	instance_destroy(self); 
 	}
 }
-else if (x < (0 - sprite_width))
+
+if (x < (0 - sprite_width))
 {
 	instance_destroy(self); 
 	//show_debug_message("CLOUD GONE");

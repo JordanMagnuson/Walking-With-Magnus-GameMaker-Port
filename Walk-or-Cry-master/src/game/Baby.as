@@ -1,6 +1,6 @@
 package game
 {
-	import flash.filesystem.File;
+	//import flash.filesystem.File;
 	import net.flashpunk.Entity;
 	import net.flashpunk.World;
 	import net.flashpunk.graphics.Spritemap;

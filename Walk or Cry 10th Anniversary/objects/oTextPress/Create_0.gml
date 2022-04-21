@@ -1,11 +1,12 @@
-FADE_OUT_DURATION = 3;
+FADE_IN_DURATION = 3
+FADE_OUT_DURATION = 5;
 started = false;
 fade = false;
-text = "Hold space to start walking.";
+text = "Walking With Magnus";
 draw_set_font(fntFont);
 
 x = 20;
-y = 100;
+y = 130;
 alpha = 1;
 
 

@@ -16,12 +16,13 @@ switch (oMyWorldController.locationName){
 	case "beach":
 		sprite_index = sprGroundBeach;
 		break;
-	case "redwoods":
-		sprite_index = sprground_redwoods;
-		break;
 	case "jungle":
 		sprite_index = sprGroundJungle;
 		break;
+	case "redwoods":
+		sprite_index = sprground_redwoods;
+		break;
+
 	
 }
 			

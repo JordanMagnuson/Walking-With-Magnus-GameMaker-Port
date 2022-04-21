@@ -1,2 +1,2 @@
-oMyWorldController.showTitle();
+//oMyWorldController.showTitle();
 instance_destroy(self);
