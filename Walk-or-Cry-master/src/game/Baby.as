@@ -58,6 +58,7 @@ package game
 		[Embed(source = "../../assets/baby/crying_15.mp3")] private const SND_CRYING_15:Class;
 		[Embed(source = "../../assets/baby/crying_16.mp3")] private const SND_CRYING_16:Class;
 		[Embed(source = "../../assets/baby/crying_17.mp3")] private const SND_CRYING_17:Class;
+		
 		//DONE
 		// Short sounds.
 		public var babySoundArray:Array = new Array();
@@ -88,6 +89,7 @@ package game
 		
 		public function Baby() 
 		{
+			// ALMOST DONE NEED TO FIND A WAY TO ADD ALL SOUND FILES INTO ARRAY
 			// Build crying sound array.
 			for (var i:int = 1; i <= 17; i++) 
 			{
@@ -100,6 +102,8 @@ package game
 					cryingSoundArray[i-1] = new Sfx(this["SND_CRYING_" + i]);
 				}
 			}	
+			
+			// ALMOST DONE NEED TO FIND A WAY TO ADD ALL SOUND FILES INTO ARRAY
 			// Build baby sound array.
 			for (var j:int = 1; j <= 24; j++) 
 			{
@@ -120,6 +124,7 @@ package game
 		
 		override public function added():void
 		{
+			//DONE
 			addTween(cryAlarm);
 			addTween(cooAlarm);
 			addTween(zzzAlarm);
@@ -127,6 +132,7 @@ package game
 			cryAlarm.start();
 			zzzAlarm.start();
 			
+			//DONE
 			// Stary crying right away.
 			cryInterval = 0.5;
 			cryAlarm.reset(cryInterval);			
@@ -138,20 +144,23 @@ package game
 			//trace('state: ' + state);
 			//trace('sndCryingHard.volume:' + sndCryingHard.volume);
 			
+			// DONE
 			x = Global.player.x + 14;
 			y = Global.player.y;
 			
+			//DONE
 			// STATE_AWAKE
 			// -------------------------------------------------------
 			checkState:if (state == STATE_AWAKE) 
 			{
-
+				//DONE
 				// Change state?
 				changeState:if ((FP.world as MyWorld).time == 'night')
 				{
 					state = STATE_ASLEEP;
 					break checkState;
 				}
+				
 				else if (Player.timeSinceWalking > 1)
 				{
 					state = STATE_CRYING;
@@ -165,6 +174,7 @@ package game
 				}
 			}
 			
+			//DONE
 			// STATE_ASLEEP
 			// -------------------------------------------------------			
 			else if (state == STATE_ASLEEP)
@@ -200,7 +210,8 @@ package game
 				}
 			}
 		}
-
+		
+		//DONE
 		/**
 		 * STATE_AWAKE alarm callback.
 		 */		
@@ -234,17 +245,18 @@ package game
 				}
 			}
 			else 
-			{
+			{	//DONE
 				// Walking: cry less.
 				cryInterval += 1;
 				
+				//DONE
 				// Stop crying.
 				if (cryInterval > DEFAULT_CRY_INTERVAL + 1) {
 					trace('stopCrying');
 					state = STATE_AWAKE;
 					cryInterval = DEFAULT_CRY_INTERVAL;
 					cryAlarm.active = false;
-					return;
+					return; //unsure about this
 				}
 			}
 			

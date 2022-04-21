@@ -11,7 +11,7 @@ global.smooth_scrolling = true;
 
 // Object globals.
 global.player_speed = 100;
-global.baybe_type = "stroller"
+global.babyType = "stroller"
 global.cloud_min_speed = 0.1;
 global.cloud_max_speed = 0.5;
 global.cloud_avg_speed = global.cloud_min_speed + (global.cloud_max_speed - global.cloud_min_speed) / 2;

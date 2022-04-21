@@ -55,6 +55,10 @@ oDay.Day(self, false);
 
 //Player
 player = instance_create_depth(0, 0, -1, oPlayer);
+
+//Baby
+baby = instance_create_depth(0,0,0, oBaby);
+
 //Starting Text
 instance_create_depth(0,0,0, oTextPress);
 

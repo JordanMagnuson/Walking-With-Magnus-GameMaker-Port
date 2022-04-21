@@ -54,18 +54,156 @@ SND_BABY_22 = short_sound_22;
 SND_BABY_23 = short_sound_23;
 SND_BABY_24 = short_sound_24;
 
+bEmit0 = audio_emitter_create();
+bEmit1 = audio_emitter_create();
+
+//NEED TO FIND A WAY TO FILL ARRAY WITH SOUNDS
+//build crying sound array
+for(var i = 1; i <= 17; i++)
+{
+	if(i < 10)
+	{
+		cryingSoundArray[i-1] = SND_CRYING_01;
+	}
+
+	else
+	{
+		cryingSoundArray[i-1] = SND_CRYING_01;
+	}
+}
+
+//NEED TO FIND A WAY TO FILL ARRAY WITH SOUNDS
+//build baby sound array
+for(var j = 1; j <= 24; j++)
+{
+	if(j < 10)
+	{
+		cryingSoundArray[j-1] = SND_CRYING_01;
+	}
+
+	else
+	{
+		cryingSoundArray[j-1] = SND_CRYING_01;
+	}
+}
+
+show_debug_message("baby created");
+state = STATE_AWAKE;
+
+//inital start of alarm, the function will then repeat it
+alarm[0] = room_speed * DEFAULT_CRY_INTERVAL;
+alarm[1] = room_speed * DEFAULT_COO_INTERVAL;
+alarm[2] = room_speed * DEFAULT_ZZZ_INTERVAL;
+
+//start crying right away
+cryInterval = 0.5;
+alarm[0] = room_speed * cryInterval;
+
 
 function cry()
 {
-	show_debug_message("CRY");
+	show_debug_message("cry");
+	if(oPlayer.timeSinceWalking > 1)
+	{
+		cryInterval -= 0.5;
+		if(cryInterval < 0.5)
+		{
+			cryInterval = 0.5;	
+		}
+	}
+	else
+	{
+		// Walking: cry less.
+		cryInterval += 1;
+		
+		// Stop Crying
+		if(cryInterval > DEFAULT_CRY_INTERVAL + 1)
+		{
+			show_debug_message("stopCrying");
+			state = STATE_AWAKE;
+			cryInterval = DEFAULT_CRY_INTERVAL;
+			alarm[0] = -1;
+			return; //somewhat unsure about this
+		}
+	}
+	
+	// Play Sound and reset Alarm
+	sound = playRandomCryingSound();
+	if(cryInterval < audio_sound_length(sound))
+	{
+		alarm[0] = room_speed * audio_sound_length(sound);
+	}
+	else
+	{
+		alarm[0] = room_speed * cryInterval;
+	}
+	show_debug_message("cryInterval: " + string(cryInterval));
 }
 
 function chanceOfCoo()
 {
-	show_debug_message("CHANCE OF COO");
+	show_debug_message("coo (maybe)");
+	
+	if(state == STATE_AWAKE)
+	{
+		if(random_range(0,1) < 0.25 && !babySoundPlaying())
+		{
+			show_debug_message("yes play coo sound");
+			sound = playRandomBabySound();
+		}
+		alarm[1] = room_speed * DEFAULT_COO_INTERVAL;
+	}
+	else
+	{
+		alarm[1] = -1;
+	}
 }
 
 function releaseZZZ()
 {
-	show_debug_message("RELEASE ZZZ");
+	//show_debug_message("RELEASE ZZZ");
+	if(state == STATE_ASLEEP)
+	{
+		if(global.babyType == "stroller")
+		{
+			var temp = instance_create_depth(x,y,depth,oZ)
+			temp.zConstruct(x, y - 18);
+		}
+		else
+		{
+			var temp = instance_create_depth(x,y,depth,oZ)
+			temp.zConstruct(x - 4,y - 13);	
+		}
+		alarm[2] = room_speed * DEFAULT_ZZZ_INTERVAL;
+	}
+	else
+	{
+		alarm[2] = -1;	
+	}
 }
+
+function cryingSoundPlaying()
+{
+	show_debug_message("cryingSoundPlaying");
+}
+
+function babySoundPlaying()
+{
+	show_debug_message("babySoundPlaying");
+}
+
+function playRandomCryingSound(vol = 1)
+{
+	//just for testing purposes
+	show_debug_message("playRandomCryingSound");
+	sound = cryingSoundArray[1];
+	audio_emitter_gain(bEmit0, vol);
+	audio_play_sound_on(bEmit0, sound, false, 20);
+	return sound;
+}
+
+function playRandomBabySound()
+{
+	show_debug_message("playRandomBabySound");
+}
+

@@ -15,7 +15,7 @@ worldController = instance_find(oMyWorldController,0)
 if(worldController == noone)
 	show_debug_message("controller not found")
 
-if(global.baybe_type == "stroller")
+if(global.babyType == "stroller")
 {
 	sprite_index = sprStroller
 }
@@ -39,7 +39,7 @@ function releaseZZZ()
 {
 	if(sleeping)
 	{
-		if(global.baybe_type == "stroller")
+		if(global.babyType == "stroller")
 		{
 			var temp = instance_create_depth(x,y,depth,oZ)
 			temp.zConstruct(x + 5,y - 18);
