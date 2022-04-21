@@ -89,6 +89,7 @@ package game
 		
 		public function Baby() 
 		{
+			// UPDATE: DONE decided to just brute force the array
 			// ALMOST DONE NEED TO FIND A WAY TO ADD ALL SOUND FILES INTO ARRAY
 			// Build crying sound array.
 			for (var i:int = 1; i <= 17; i++) 
