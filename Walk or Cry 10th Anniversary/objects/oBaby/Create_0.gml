@@ -9,7 +9,6 @@ DEFAULT_ZZZ_INTERVAL = 1;
 
 cryInterval = DEFAULT_CRY_INTERVAL;
 
-cryingSoundArray = [];
 SND_CRYING_01 = crying_01;
 SND_CRYING_02 = crying_02;
 SND_CRYING_03 = crying_03;
@@ -28,7 +27,7 @@ SND_CRYING_15 = crying_15;
 SND_CRYING_16 = crying_16;
 SND_CRYING_17 = crying_17;
 
-babySoundArray = [];
+
 SND_BABY_01 = short_sound_01;
 SND_BABY_02 = short_sound_02;
 SND_BABY_03 = short_sound_03;
@@ -54,11 +53,27 @@ SND_BABY_22 = short_sound_22;
 SND_BABY_23 = short_sound_23;
 SND_BABY_24 = short_sound_24;
 
+cryingSoundArray = [SND_CRYING_01, SND_CRYING_02, SND_CRYING_03, SND_CRYING_04, SND_CRYING_05,
+					SND_CRYING_06, SND_CRYING_07, SND_CRYING_08, SND_CRYING_09, SND_CRYING_10,
+					SND_CRYING_11, SND_CRYING_12, SND_CRYING_13, SND_CRYING_14, SND_CRYING_15,
+					SND_CRYING_16, SND_CRYING_17];
+					
+babySoundArray =	[SND_BABY_01, SND_BABY_02, SND_BABY_03, SND_BABY_04, SND_BABY_05,
+					SND_BABY_06, SND_BABY_07, SND_BABY_08, SND_BABY_09, SND_BABY_10,
+					SND_BABY_11, SND_BABY_12, SND_BABY_13, SND_BABY_14, SND_BABY_15,
+					SND_BABY_16, SND_BABY_17, SND_BABY_18, SND_BABY_19, SND_BABY_20,
+					SND_BABY_21, SND_BABY_22, SND_BABY_23, SND_BABY_24];
+
 bEmit0 = audio_emitter_create();
 bEmit1 = audio_emitter_create();
 
-//NEED TO FIND A WAY TO FILL ARRAY WITH SOUNDS
-//build crying sound array
+/*
+// UPDATE: I just decided to brute force the array as this portion was only made to fill the array with the sounds
+// and there isn't a method to convert a string into the variable name 
+//
+// NEED TO FIND A WAY TO FILL ARRAY WITH SOUNDS
+//
+// build crying sound array
 for(var i = 1; i <= 17; i++)
 {
 	if(i < 10)
@@ -86,6 +101,7 @@ for(var j = 1; j <= 24; j++)
 		cryingSoundArray[j-1] = SND_CRYING_01;
 	}
 }
+*/
 
 show_debug_message("baby created");
 state = STATE_AWAKE;
@@ -184,26 +200,55 @@ function releaseZZZ()
 
 function cryingSoundPlaying()
 {
-	show_debug_message("cryingSoundPlaying");
+	for(var i = 0; i < array_length(cryingSoundArray); i++)
+	{
+		if(audio_is_playing(cryingSoundArray[i]))
+		{
+			return true;	
+		}
+	}
+	return false;
 }
 
 function babySoundPlaying()
 {
-	show_debug_message("babySoundPlaying");
+	for(var i = 0; i < array_length(babySoundArray); i++)
+	{
+		if(audio_is_playing(babySoundArray[i]))
+		{
+			return true;	
+		}
+	}
+	return false;
 }
 
 function playRandomCryingSound(vol = 1)
 {
-	//just for testing purposes
-	show_debug_message("playRandomCryingSound");
-	sound = cryingSoundArray[1];
+	//show_debug_message("playRandomCryingSound");
+	idx = irandom(16);
+	
+	show_debug_message("Crying idx: " + string(idx));
+	
+	sound = cryingSoundArray[idx];
+	
 	audio_emitter_gain(bEmit0, vol);
 	audio_play_sound_on(bEmit0, sound, false, 20);
+	
 	return sound;
 }
 
-function playRandomBabySound()
+function playRandomBabySound(vol = 1)
 {
-	show_debug_message("playRandomBabySound");
+	//show_debug_message("playRandomBabySound");
+	idx = irandom(23);
+	
+	show_debug_message("Baby idx: " + string(idx));
+	
+	sound = babySoundArray[idx];
+	
+	audio_emitter_gain(bEmit1, vol);
+	audio_play_sound_on(bEmit1, sound, false, 20);
+	
+	return sound;
 }
 
