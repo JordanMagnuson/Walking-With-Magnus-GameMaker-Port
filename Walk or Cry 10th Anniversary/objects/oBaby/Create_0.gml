@@ -9,6 +9,8 @@ DEFAULT_ZZZ_INTERVAL = 1;
 
 cryInterval = DEFAULT_CRY_INTERVAL;
 
+
+
 SND_CRYING_01 = crying_01;
 SND_CRYING_02 = crying_02;
 SND_CRYING_03 = crying_03;
@@ -53,6 +55,11 @@ SND_BABY_22 = short_sound_22;
 SND_BABY_23 = short_sound_23;
 SND_BABY_24 = short_sound_24;
 
+/*
+cryingSoundArray = [];
+babySoundArray = [];
+*/
+
 cryingSoundArray = [SND_CRYING_01, SND_CRYING_02, SND_CRYING_03, SND_CRYING_04, SND_CRYING_05,
 					SND_CRYING_06, SND_CRYING_07, SND_CRYING_08, SND_CRYING_09, SND_CRYING_10,
 					SND_CRYING_11, SND_CRYING_12, SND_CRYING_13, SND_CRYING_14, SND_CRYING_15,
@@ -64,10 +71,12 @@ babySoundArray =	[SND_BABY_01, SND_BABY_02, SND_BABY_03, SND_BABY_04, SND_BABY_0
 					SND_BABY_16, SND_BABY_17, SND_BABY_18, SND_BABY_19, SND_BABY_20,
 					SND_BABY_21, SND_BABY_22, SND_BABY_23, SND_BABY_24];
 
+
 bEmit0 = audio_emitter_create();
 bEmit1 = audio_emitter_create();
 
 /*
+// UPDATE: Found a new function thanks to Raven going to try to implement it.
 // UPDATE: I just decided to brute force the array as this portion was only made to fill the array with the sounds
 // and there isn't a method to convert a string into the variable name 
 //
@@ -78,14 +87,20 @@ for(var i = 1; i <= 17; i++)
 {
 	if(i < 10)
 	{
-		cryingSoundArray[i-1] = SND_CRYING_01;
+		var tempSound = asset_get_index("SND_CRYING_0" + string(i));
+		//array_push(cryingSoundArray, tempSound);
+		cryingSoundArray[i-1] = tempSound;
+		show_debug_message("crySoundArray: " + string(asset_get_index("crying_01")));
 	}
 
 	else
 	{
-		cryingSoundArray[i-1] = SND_CRYING_01;
+		var tempSound = asset_get_index("SND_CRYING_" + string(i));
+		//array_push(cryingSoundArray, tempSound);
+		cryingSoundArray[i-1] = tempSound;
 	}
 }
+
 
 //NEED TO FIND A WAY TO FILL ARRAY WITH SOUNDS
 //build baby sound array
@@ -93,15 +108,16 @@ for(var j = 1; j <= 24; j++)
 {
 	if(j < 10)
 	{
-		cryingSoundArray[j-1] = SND_CRYING_01;
+		babySoundArray[j-1] = asset_get_index("SND_BABY_0" + string(j));
 	}
 
 	else
 	{
-		cryingSoundArray[j-1] = SND_CRYING_01;
+		babySoundArray[j-1] = asset_get_index("SND_BABY_" + string(j));
 	}
 }
 */
+
 
 show_debug_message("baby created");
 state = STATE_AWAKE;
@@ -230,7 +246,7 @@ function playRandomCryingSound(vol = 1)
 	show_debug_message("Crying idx: " + string(idx));
 	
 	sound = cryingSoundArray[idx];
-	
+
 	audio_emitter_gain(bEmit0, vol);
 	audio_play_sound_on(bEmit0, sound, false, 20);
 	
