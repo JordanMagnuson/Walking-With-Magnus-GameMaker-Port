@@ -50,7 +50,7 @@ else if (lastPressedAgo > 0.6)
 if (walking) 
 {
 	timeSinceWalking = 0;
-	image_speed =  animSpeed
+	//image_speed =  animSpeed
 }
 else 
 {
