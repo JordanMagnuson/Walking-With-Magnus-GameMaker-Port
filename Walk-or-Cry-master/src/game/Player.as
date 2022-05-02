@@ -23,6 +23,7 @@ package game
 		public static var sleeping:Boolean = false;
 		public static var lastPressedKey:int = 0;
 		public static var lastPressedAgo:Number = 0;
+		public static var timeSinceWalking:Number = 0;		
 		
 		public static const DEFAULT_ZZZ_INTERVAL:Number = 1;
 		public var zzzAlarm:Alarm = new Alarm(DEFAULT_ZZZ_INTERVAL, releaseZZZ);
@@ -130,6 +131,15 @@ package game
 			else if (lastPressedAgo > 0.6) {
 				walking = false;
 			}
+			
+			// Keep track of how long we hae been stopped.
+			// (Baby should only start crying if we've been stopped for a while)
+			if (walking) {
+				timeSinceWalking = 0;
+			}
+			else {
+				timeSinceWalking += FP.elapsed;
+			}			
 			
 			if (!walking && (FP.world as MyWorld).time == 'night' && startedWalking)
 			{
