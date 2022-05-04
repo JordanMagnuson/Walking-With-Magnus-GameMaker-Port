@@ -18,7 +18,7 @@ function createItemHere()
 	creationNumber = random_range(0,1);
 		
 	if (random_range(0,1) > 0.25) {		
-		if (creationNumber < 0.005 && global.oFlowerTreeSeen == false){
+		if (creationNumber < global.wonderViewChance && global.oFlowerTreeSeen == false){
 			instance_create_depth(room_width+10, 175, 0, oFlowerTree);
 			global.oFlowerTreeSeen = true;
 			//show_debug_message(string(creationNumber) + ": Flower Tree Created");

@@ -14,12 +14,12 @@ function createItemHere(){
 	
 	//Mid distance
 	if(random(1) > 0.25){
-		if(creationNumber < 0.01 && global.oPyramidsSeen == false){
+		if(creationNumber < global.wonderViewChance && global.oPyramidsSeen == false){
 			instance_create_depth(room_width+10, 175,0, oPyramids);
 			//show_debug_message("Pyramid Created");
 			global.oPyramidsSeen = true;
 	 	}
-		else if(creationNumber < 0.05){
+		else if(creationNumber < global.rareItemViewChance){
 			instance_create_depth(room_width+10, 175,0, oGiantCactus);
 			//show_debug_message("Giant Cactus Created");
 		}

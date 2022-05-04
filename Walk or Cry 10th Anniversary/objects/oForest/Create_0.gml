@@ -19,7 +19,7 @@ function createItemHere(){
 	
 	//Mid distance
 	if(random(1) > 0.2){
-		if(creationNumber < 0.005 && global.oGiantPineSeen == false){
+		if(creationNumber < global.wonderViewChance && global.oGiantPineSeen == false){
 			instance_create_depth(room_width+10, 175,0, oGiantPine);
 			global.oGiantPineSeen = true;
 	 	}

@@ -24,7 +24,7 @@ function createItemHere(){
 	
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
-		if (creationNumber < 0.005 && global.oCastleSeen == false){ 
+		if (creationNumber < global.wonderViewChance && global.oCastleSeen == false){ 
 			instance_create_depth(room_width+10, 175, 0, oCastle);
 			global.oCastleSeen = true;
 		}

@@ -17,12 +17,12 @@ function createItemHere(){
 	
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
-		if (creationNumber < 0.01 && global.oSnowmanSeen == false){ 
+		if (creationNumber < global.wonderViewChance && global.oSnowmanSeen == false){ 
 			instance_create_depth(room_width+10, 175, 0, oSnowman);
 			global.oSnowmanSeen = true;
 			//show_debug_message(string(creationNumber) + ": SnowMan Created");
 		}
-		else if (creationNumber < 0.05){
+		else if (creationNumber < global.rareItemViewChance){
 			instance_create_depth(room_width+10, 175, 0, oIgloo);
 			//show_debug_message(string(creationNumber) + ": Frozen River Created");
 		}
