@@ -3,7 +3,7 @@ walking = false;
 startedWalking = false;
 sleeping = false;
 lastPressedKey = 0;
-lastPressedAgo = 0;
+lastPressedAgo = -1;
 timeSinceWalking = 0;
 
 //const
