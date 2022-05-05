@@ -17,6 +17,8 @@ global.cloud_max_speed = 0.5;
 global.cloud_avg_speed = global.cloud_min_speed + (global.cloud_max_speed - global.cloud_min_speed) / 2;
 
 //Globals for rare objects
+global.wonderViewChance = 0.005;
+global.rareItemViewChance = 0.025;
 global.oCastleSeen = false;
 global.oPyramidsSeen = false;
 global.oGiantPineSeen = false;
