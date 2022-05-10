@@ -1,13 +1,15 @@
 FADE_IN_DURATION = 3
-FADE_OUT_DURATION = 5;
+FADE_OUT_DURATION = 3;
 started = false;
 fade = false;
 text = "Walking With Magnus";
+fadein = false;
+fadeout = false;
 draw_set_font(fntFont);
 
 x = 20;
 y = 130;
-alpha = 1;
+alpha = 0;
 
 
 function nextText(){
@@ -15,7 +17,8 @@ function nextText(){
 }
 
 function fadeOut(){
-	fade = true;
+	fadein = false;
+	fadeout = true;
 }
 
 function destroy(){
