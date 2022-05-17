@@ -3,7 +3,7 @@
 
 if(fading)
 {
-	image_alpha -= 0.04;	
+	image_alpha -= 0.005;	
 }
 
 x += RISE_SPEED

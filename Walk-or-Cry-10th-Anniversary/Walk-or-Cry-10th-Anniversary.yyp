@@ -241,6 +241,7 @@
   ],
   "isDnDProject": false,
   "isEcma": false,
+  "tutorialPath": "",
   "configs": {
     "name": "Default",
     "children": [],
@@ -294,7 +295,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"custom index.html","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.1.1.610",
+    "IDEVersion": "2.3.6.595",
   },
   "resourceVersion": "1.4",
   "name": "Walk-or-Cry-10th-Anniversary",
