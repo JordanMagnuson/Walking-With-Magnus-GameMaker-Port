@@ -44,31 +44,27 @@ function createItemHere()
 		//Night Sounds
 		if(oMyWorldController.time == "night"){
 			if(creationNumber < 0.01 && !audio_is_playing(sndBee)){
-				sPlainEmit0 = audio_emitter_create();
-				audio_emitter_gain(sPlainEmit0, vol);
-				audio_emitter_position(sPlainEmit0, pan, 0, 0);
-				audio_play_sound_on(sPlainEmit0, sndBee, false, 20);
+				audio_emitter_gain(sEmit0, vol);
+				audio_emitter_position(sEmit0, pan, 0, 0);
+				audio_play_sound_on(sEmit0, sndBee, false, 20);
 			}
 			else if(creationNumber < 0.06 && !audio_is_playing(sndCicadas)){
-				sPlainEmit1 = audio_emitter_create();
-				audio_emitter_gain(sPlainEmit1, vol);
-				audio_emitter_position(sPlainEmit1, pan, 0, 0);
-				audio_play_sound_on(sPlainEmit1, sndCicadas, false, 20);
+				audio_emitter_gain(sEmit1, vol);
+				audio_emitter_position(sEmit1, pan, 0, 0);
+				audio_play_sound_on(sEmit1, sndCicadas, false, 20);
 			}
 		}
 		//Day Sounds
 		else{
 			if(creationNumber < 0.01 && !audio_is_playing(sndCicadas)){
-				sPlainEmit2 = audio_emitter_create();
-				audio_emitter_gain(sPlainEmit2, vol);
-				audio_emitter_position(sPlainEmit2, pan, 0, 0);
-				audio_play_sound_on(sPlainEmit2, sndCicadas, false, 20);
+				audio_emitter_gain(sEmit2, vol);
+				audio_emitter_position(sEmit2, pan, 0, 0);
+				audio_play_sound_on(sEmit2, sndCicadas, false, 20);
 			}
 			else if(creationNumber < 0.06 && !audio_is_playing(sndBee)){
-				sPlainEmit3 = audio_emitter_create();
-				audio_emitter_gain(sPlainEmit3, vol);
-				audio_emitter_position(sPlainEmit3, pan, 0, 0);
-				audio_play_sound_on(sPlainEmit3, sndBee, false, 20);
+				audio_emitter_gain(sEmit3, vol);
+				audio_emitter_position(sEmit3, pan, 0, 0);
+				audio_play_sound_on(sEmit3, sndBee, false, 20);
 			}
 		}
 	}

@@ -45,32 +45,28 @@ function createItemHere()
 		{
 			if(creationNumber < 0.1 && !audio_is_playing(sndOwl))
 			{
-				sRedWoodEmit0 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit0, vol);
-				audio_emitter_position(sRedWoodEmit0, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit0, sndOwl, false, 20);
+				audio_emitter_gain(sEmit0, vol);
+				audio_emitter_position(sEmit0, pan, 0, 0);
+				audio_play_sound_on(sEmit0, sndOwl, false, 20);
 			}
 			
 			if(creationNumber < 0.2 && !audio_is_playing(sndWolf))
 			{
-				sRedWoodEmit1 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit1, vol);
-				audio_emitter_position(sRedWoodEmit1, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit1, sndWolf, false, 20);
+				audio_emitter_gain(sEmit1, vol);
+				audio_emitter_position(sEmit1, pan, 0, 0);
+				audio_play_sound_on(sEmit1, sndWolf, false, 20);
 			}
 			if(creationNumber < 0.3 && !audio_is_playing(sndCreaking))
 			{
-				sRedWoodEmit2 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit2, vol);
-				audio_emitter_position(sRedWoodEmit2, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit2, sndCreaking, false, 20);
+				audio_emitter_gain(sEmit2, vol);
+				audio_emitter_position(sEmit2, pan, 0, 0);
+				audio_play_sound_on(sEmit2, sndCreaking, false, 20);
 			}
 			if(creationNumber < 0.4 && !audio_is_playing(sndCicadas))
 			{
-				sRedWoodEmit3 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit3, vol);
-				audio_emitter_position(sRedWoodEmit3, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit3, sndCicadas, false, 20);
+				audio_emitter_gain(sEmit3, vol);
+				audio_emitter_position(sEmit3, pan, 0, 0);
+				audio_play_sound_on(sEmit3, sndCicadas, false, 20);
 			}
 			
 		}
@@ -78,32 +74,28 @@ function createItemHere()
 		{
 			if(creationNumber < 0.01 && !audio_is_playing(sndOwl))
 			{
-				sRedWoodEmit0 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit0, vol);
-				audio_emitter_position(sRedWoodEmit0, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit0, sndOwl, false, 20);
+				audio_emitter_gain(sEmit0, vol);
+				audio_emitter_position(sEmit0, pan, 0, 0);
+				audio_play_sound_on(sEmit0, sndOwl, false, 20);
 			}
 			
 			if(creationNumber < 0.02 && !audio_is_playing(sndWolf))
 			{
-				sRedWoodEmit1 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit1, vol);
-				audio_emitter_position(sRedWoodEmit1, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit1, sndWolf, false, 20);
+				audio_emitter_gain(sEmit1, vol);
+				audio_emitter_position(sEmit1, pan, 0, 0);
+				audio_play_sound_on(sEmit1, sndWolf, false, 20);
 			}
 			if(creationNumber < 0.03 && !audio_is_playing(sndCreaking))
 			{
-				sRedWoodEmit2 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit2, vol);
-				audio_emitter_position(sRedWoodEmit2, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit2, sndCreaking, false, 20);
+				audio_emitter_gain(sEmit2, vol);
+				audio_emitter_position(sEmit2, pan, 0, 0);
+				audio_play_sound_on(sEmit2, sndCreaking, false, 20);
 			}
 			if(creationNumber < 0.15 && !audio_is_playing(sndCicadas))
 			{
-				sRedWoodEmit3 = audio_emitter_create();
-				audio_emitter_gain(sRedWoodEmit3, vol);
-				audio_emitter_position(sRedWoodEmit3, pan, 0, 0);
-				audio_play_sound_on(sRedWoodEmit3, sndCicadas, false, 20);
+				audio_emitter_gain(sEmit3, vol);
+				audio_emitter_position(sEmit3, pan, 0, 0);
+				audio_play_sound_on(sEmit3, sndCicadas, false, 20);
 			}
 		}
 		
