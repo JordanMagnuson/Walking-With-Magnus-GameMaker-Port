@@ -93,7 +93,7 @@ function changeLocation(newLocation = ""){
 		if (newLocation == "") {
 			// If newLocation not passed, choose location at random until new.
 			do{
-				newLocation = choose("forest", "desert", "plains", "snow",  "beach");
+				newLocation = choose("forest", "desert", "plains", "snow",  "beach", "redwoods");
 			} 
 			until (newLocation != locationName);
 		}
@@ -115,6 +115,9 @@ function changeLocation(newLocation = ""){
 		else if(locationName == "plains"){
 			currentLocation = instance_create_depth(0, 0, 0, oPlains);
 		}
+		else if(locationName == "redwoods"){
+			currentLocation = instance_create_depth(0, 0, 0, oRedWoods);
+		}		
 		show_debug_message("Current location: " + locationName);   
 		oLocation.Location(currentLocation.DAY_SOUND, currentLocation.NIGHT_SOUND);    
 		oLocation.creationTime = 2;
