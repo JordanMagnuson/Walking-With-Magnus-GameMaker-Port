@@ -32,7 +32,7 @@ function createItemHere()
 		}
 		else if(creationNumber < 1)
 		{
-			//add redwood
+			instance_create_depth(room_width+10, 175,0, oRedWood);	
 		}
 	}
 	
