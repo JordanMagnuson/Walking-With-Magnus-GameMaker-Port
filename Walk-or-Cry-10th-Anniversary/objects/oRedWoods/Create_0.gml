@@ -18,7 +18,7 @@ sEmit3 = audio_emitter_create();
 Location(DAY_SOUND, NIGHT_SOUND);
 locationType = "redwoods";
 
-function createItem()
+function createItemHere()
 {
 	oLocation.createItem();
 	creationNumber = random_range(0,1);
@@ -112,5 +112,5 @@ function createItem()
 
 
 function gameStart(){
-	//instance_create_depth(150, 175, 0, oFlowers); 
+	instance_create_depth(150, 175, 0, oRedWood); 
 }
