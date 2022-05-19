@@ -7,7 +7,7 @@ global.show_bounding_boxes = false;
 
 // Use smooth (sub-pixel) scrolling, or retro-style integer pixel scrolling?
 // This option is new from original AS3 source (which used integer pixel scrolling).
-global.smooth_scrolling = true;
+global.smooth_scrolling = false;
 
 // Object globals.
 global.player_speed = 100;

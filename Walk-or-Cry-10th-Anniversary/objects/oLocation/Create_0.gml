@@ -19,10 +19,10 @@ function Location(DAY_SOUND, NIGHT_SOUND, maxCreationTime = 4, minCreationTime =
 	daySound = DAY_SOUND;
 	nightSound = NIGHT_SOUND;
 		
-	self.maxCreationTime = (maxCreationTime / (100 / 100));//should be / (oPlayer.SPEED / 100)
-	self.minCreationTime = (minCreationTime / (100 / 100));
-	self.creationTimeIncreaseRate = (creationTimeIncreaseRate * (100 / 100));
-	self.creationTimeDecreaseRate = (creationTimeDecreaseRate * (100 / 100));
+	self.maxCreationTime = (maxCreationTime / (global.player_speed / 100));//should be / (oPlayer.SPEED / 100)
+	self.minCreationTime = (minCreationTime / (global.player_speed / 100));
+	self.creationTimeIncreaseRate = (creationTimeIncreaseRate * (global.player_speed / 100));
+	self.creationTimeDecreaseRate = (creationTimeDecreaseRate * (global.player_speed / 100));
 		
 	creationTime = maxCreationTime;
 	alarm[0] = creationTime * room_speed; 

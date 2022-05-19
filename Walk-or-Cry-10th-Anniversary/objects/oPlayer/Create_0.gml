@@ -1,4 +1,4 @@
-SPEED = global.player_speed/1.5;
+SPEED = global.player_speed
 walking = false;
 startedWalking = false;
 sleeping = false;
