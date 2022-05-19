@@ -11,7 +11,7 @@ room_width = 300;
 room_height = 200;
 
 currentLocation = 0;
-locationName = choose("desert", "forest", "snow", "plains", "beach");
+locationName = choose("desert", "forest", "snow", "plains", "beach", "redwoods");
 
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
