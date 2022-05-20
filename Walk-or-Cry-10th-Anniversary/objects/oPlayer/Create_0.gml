@@ -8,6 +8,7 @@ timeSinceWalking = 0;
 
 //const
 DEFAULT_ZZZ_INTERVAL = 1;
+FIRST_BUTTON_CHECKER = 0;
 
 
 worldController = instance_find(oMyWorldController,0)

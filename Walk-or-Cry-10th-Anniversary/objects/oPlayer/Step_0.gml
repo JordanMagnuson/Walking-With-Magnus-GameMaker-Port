@@ -14,20 +14,29 @@ if(keyboard_check_pressed(ord("A")) && lastPressedKey != ord("A"))
 {
 	lastPressedKey = ord("A")
 	lastPressedAgo = 0;
+	FIRST_BUTTON_CHECKER = 1;
 }
 else if(keyboard_check_pressed(ord("S")) && lastPressedKey != ord("S"))
 {
 	lastPressedKey = ord("S")
 	lastPressedAgo = 0;
+	FIRST_BUTTON_CHECKER = 1;
 }
 else if(keyboard_check_pressed(ord("D")) && lastPressedKey != ord("D"))
 {
 	lastPressedKey = ord("D")
 	lastPressedAgo = 0;
+	FIRST_BUTTON_CHECKER = 1;
 }
 else 
 {
-	lastPressedAgo += delta_time / 1000000;
+	if(FIRST_BUTTON_CHECKER == 0){
+		lastPressedAgo = 1;
+	}
+	else{
+		lastPressedAgo += delta_time / 1000000;
+	}
+	//lastPressedAgo = 1;
 }
 
 
@@ -43,6 +52,7 @@ if (lastPressedAgo == 0)
 	
 	
 }
+
 else if (lastPressedAgo > 0.6)
 {
 	walking = false;

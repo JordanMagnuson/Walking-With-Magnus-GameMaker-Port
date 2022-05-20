@@ -9,8 +9,6 @@ DEFAULT_ZZZ_INTERVAL = 1;
 
 cryInterval = DEFAULT_CRY_INTERVAL;
 
-
-
 SND_CRYING_01 = crying_01;
 SND_CRYING_02 = crying_02;
 SND_CRYING_03 = crying_03;
