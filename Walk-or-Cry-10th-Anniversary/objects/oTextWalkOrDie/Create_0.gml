@@ -3,7 +3,7 @@ FADE_OUT_DURATION = 3;
 
 started = false;
 
-text = "Walk or Die";
+text = "Walking With Magnus";
 //font is already set
 x = 145;
 y = 100;
