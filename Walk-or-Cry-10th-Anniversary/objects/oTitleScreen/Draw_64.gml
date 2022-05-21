@@ -7,6 +7,7 @@ var h1_size = 4;
 var h2_size = 3;
 var h3_size = 2;
 
+/*
 // Debug.
 if (global.debug) {
 	draw_sprite(sprDebug, 0, 64, 64);
@@ -14,6 +15,7 @@ if (global.debug) {
 	draw_sprite(sprDebug, 0, surface_width- 64, surface_height - 64);
 	draw_sprite(sprDebug, 0, 64, surface_height - 64);
 }
+*/
 
 // Set up text drawing.
 draw_set_color(c_white);
