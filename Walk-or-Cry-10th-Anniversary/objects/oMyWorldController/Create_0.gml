@@ -138,7 +138,8 @@ function changeLocation(newLocation = ""){
 
 function changeLocationChance(){
 	alarm[0] = CHANGE_LOCATION_TIME;
-	if(instance_exists(oLocation)){
+	var player = instance_find(oPlayer,0);
+	if(instance_exists(oLocation) and player.walking){
 		switch (oLocation.creationTimeSlope){
 			case 1:
 				if (oLocation.creationTime < (oLocation.minCreationTime * 2)){
