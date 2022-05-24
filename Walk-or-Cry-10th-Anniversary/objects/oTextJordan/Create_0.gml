@@ -18,7 +18,7 @@ function fadeIn(){
 fadeIn();
 
 function nextText(){
-	instance_create_depth(0,0,0, oTextWalkOrDie);	
+	//instance_create_depth(0,0,0, oTextWalkOrDie);	
 }
 
 function fadeOut(){

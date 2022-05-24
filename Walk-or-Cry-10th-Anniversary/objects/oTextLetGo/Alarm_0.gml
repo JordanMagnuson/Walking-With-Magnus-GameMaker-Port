@@ -1,2 +1,3 @@
 //oMyWorldController.showTitle();
-instance_destroy(self);
+//instance_destroy(self);
+fadeOut()
