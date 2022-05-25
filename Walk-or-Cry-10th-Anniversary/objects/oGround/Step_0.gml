@@ -1,10 +1,10 @@
 if(x > -(sprite_get_width(sprGroundBeach)/2)){
 	if(instance_exists(oPlayer) && oPlayer.walking){
 		if (global.smooth_scrolling) {
-			x -= (oPlayer.SPEED/50)/4 * (delta_time / 1000);
+			x -= (oPlayer.SPEED/50)/4;
 		}
 		else if(oMyWorldController.fourthFrame == 1){
-			x -= (oPlayer.SPEED/50)* (delta_time / 1000);
+			x -= (oPlayer.SPEED/50);
 		}
 	}
 }
