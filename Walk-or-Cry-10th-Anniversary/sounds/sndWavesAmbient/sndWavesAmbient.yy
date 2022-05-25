@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndWavesAmbient.wav",
-  "duration": 50.0506134,
+  "soundFile": "sndWavesAmbient.mp3",
+  "duration": 49.8416328,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
