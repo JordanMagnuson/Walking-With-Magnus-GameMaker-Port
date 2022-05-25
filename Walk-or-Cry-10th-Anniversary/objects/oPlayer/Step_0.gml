@@ -28,14 +28,9 @@ else if(keyboard_check_pressed(ord("D")) && lastPressedKey != ord("D"))
 	lastPressedAgo = 0;
 	FIRST_BUTTON_CHECKER = 1;
 }
-else 
+else if (FIRST_BUTTON_CHECKER == 1)
 {
-	if(FIRST_BUTTON_CHECKER == 0){
-		lastPressedAgo = 1;
-	}
-	else{
-		lastPressedAgo += delta_time / 1000000;
-	}
+	lastPressedAgo += delta_time / 1000000;
 	//lastPressedAgo = 1;
 }
 
