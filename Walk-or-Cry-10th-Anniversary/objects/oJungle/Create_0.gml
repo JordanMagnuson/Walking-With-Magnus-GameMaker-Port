@@ -4,8 +4,8 @@ sEmit1 = audio_emitter_create();
 sEmit2 = audio_emitter_create();
 sEmit3 = audio_emitter_create();
 
-//DAY_SOUND = "sndJungleDay";
-//NIGHT_SOUND = "sndJungleNight";
+DAY_SOUND = "sndJungleDay";
+NIGHT_SOUND = "sndJungleNight";
 
 Location(DAY_SOUND, NIGHT_SOUND, 0.6, 0.4);
 locationType = "jungle";
