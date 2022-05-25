@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndForestAmbient.wav",
-  "duration": 30.41687,
+  "duration": 31.9544678,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
