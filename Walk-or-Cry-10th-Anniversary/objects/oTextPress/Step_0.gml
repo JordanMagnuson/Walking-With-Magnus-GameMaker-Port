@@ -1,9 +1,9 @@
 if(instance_exists(oPlayer)){
-	if(oPlayer.walking && started == false){
+	if(started == false){
 		started = true;
-		fadeIn();
+		alarm[1] = 2 * room_speed
 		//alpha = 1;
-		alarm[0] = 2 * room_speed;
+		
 	}
 }
 
