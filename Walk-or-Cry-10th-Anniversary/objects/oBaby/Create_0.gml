@@ -122,8 +122,9 @@ state = STATE_AWAKE;
 
 //inital start of alarm, the function will then repeat it
 alarm[0] = room_speed * DEFAULT_CRY_INTERVAL;
-alarm[1] = room_speed * DEFAULT_COO_INTERVAL;
 alarm[2] = room_speed * DEFAULT_ZZZ_INTERVAL;
+//alarm[1] = room_speed * DEFAULT_COO_INTERVAL;
+
 
 //start crying right away
 cryInterval = 0.5;
