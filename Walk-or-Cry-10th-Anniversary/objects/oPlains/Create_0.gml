@@ -43,12 +43,12 @@ function createItemHere()
 		
 		//Night Sounds
 		if(oMyWorldController.time == "night"){
-			if(creationNumber < 0.01 && !audio_is_playing(sndBee)){
-				audio_emitter_gain(sEmit0, vol);
-				audio_emitter_position(sEmit0, pan, 0, 0);
-				audio_play_sound_on(sEmit0, sndBee, false, 20);
-			}
-			else if(creationNumber < 0.06 && !audio_is_playing(sndCicadas)){
+			//if(creationNumber < 0.01 && !audio_is_playing(sndBee)){
+			//	audio_emitter_gain(sEmit0, vol);
+			//	audio_emitter_position(sEmit0, pan, 0, 0);
+			//	audio_play_sound_on(sEmit0, sndBee, false, 20);
+			//}
+			if(creationNumber < 0.05 && !audio_is_playing(sndCicadas)){
 				audio_emitter_gain(sEmit1, vol);
 				audio_emitter_position(sEmit1, pan, 0, 0);
 				audio_play_sound_on(sEmit1, sndCicadas, false, 20);
