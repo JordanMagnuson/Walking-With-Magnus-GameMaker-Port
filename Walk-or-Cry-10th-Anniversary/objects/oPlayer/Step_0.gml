@@ -10,9 +10,9 @@ else if(!walking && audio_is_playing(sndWalking))
 
 
 
-if(keyboard_check_pressed(ord("A")) && lastPressedKey != ord("A"))
+if(keyboard_check_pressed(vk_left) && lastPressedKey != vk_left)
 {
-	lastPressedKey = ord("A")
+	lastPressedKey = vk_left
 	lastPressedAgo = 0;
 	FIRST_BUTTON_CHECKER = 1;
 }
@@ -22,9 +22,9 @@ else if(keyboard_check_pressed(ord("S")) && lastPressedKey != ord("S"))
 	lastPressedAgo = 0;
 	FIRST_BUTTON_CHECKER = 1;
 }
-else if(keyboard_check_pressed(ord("D")) && lastPressedKey != ord("D"))
+else if(keyboard_check_pressed(vk_right) && lastPressedKey != vk_right)
 {
-	lastPressedKey = ord("D")
+	lastPressedKey = vk_right
 	lastPressedAgo = 0;
 	FIRST_BUTTON_CHECKER = 1;
 }
