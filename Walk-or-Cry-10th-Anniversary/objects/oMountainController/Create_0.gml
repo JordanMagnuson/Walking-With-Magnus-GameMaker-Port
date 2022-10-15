@@ -15,7 +15,8 @@ alarm[1] = MOUNTAIN_DENSITY_CHANGE_TIME * room_speed; //mountain density alarm
 
 function releaseMountain(){
 	alarm[0] = mountainReleaseTime * room_speed;
-	instance_create_depth(room_width+10, 175,0, oMountain);
+	if (oPlayer.walking)
+		instance_create_depth(room_width+10, 175,0, oMountain);
 }
 
 function changeMountainDensity(){
